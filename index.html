@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downlodable html page</title>
+</head>
+<body>
+    
+    <button id="download-btn">Download as PDF</button>
+
+    <div id="content">
+        <!-- Your page content here -->
+        <h1>Welcome to My Website</h1>
+        <p>This is the content that will be downloaded as a PDF.</p>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+    <script>
+        document.getElementById('download-btn').addEventListener('click', function() {
+            var element = document.getElementById('content');
+            var options = {
+                margin:       1,
+                filename:     'my_page.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2 },
+                jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+            };
+    
+            html2pdf().from(element).set(options).save();
+        });
+    </script>
+    
+
+</body>
+
+
+</html>

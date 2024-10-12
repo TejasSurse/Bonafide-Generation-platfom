@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Bonafide Certificate</title>
+    <style>
+        /* A4 size styling */
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 210mm;  /* A4 width */
+            height: 297mm; /* A4 height */
+            margin: 0 auto;
+            background-color: white;
+            padding: 30mm 20mm; /* Adjust padding to look good on A4 size */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+
+        /* Header styling */
+        .header {
+            text-align: center;
+        }
+
+        .header img {
+            width: 100px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .header h2 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .header p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        /* Content section */
+        .content {
+            margin-top: 20px;
+        }
+
+        .content h2 {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 20px;
+            margin-bottom: 30px;
+            margin-top: 100px;
+        }
+
+        .content span {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Footer section */
+        .footer {
+            margin-top: 260px;
+        }
+
+        .footer p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .footer .signature {
+            margin-top: 80px;
+            margin-left: 700px;
+        }
+
+        /* Hide the button during print */
+        @media print {
+            body, .container {
+                margin: 0;
+                box-shadow: none;
+                border: none;
+            }
+
+            .container {
+                padding: 25mm;
+            }
+
+            button {
+                display: none; /* Hide button when printing */
+            }
+        }
+    </style>
+</head>
+<body>
+    <button onclick="window.print()">Download as PDF</button>
+    <div class="container">
+        <div class="header">
+            <h1>CSMSS</h1>
+            <h2>CHHATRAPATI SHAHU MAHARAJ SHIKSHAN SANSTHA'S</h2>
+            <h2>CHH. SHAHU COLLEGE OF ENGINEERING</h2>
+            <p>Approved by AICTE New Delhi, DTE (Govt. of Maharashtra) and affiliated to Dr. B.A.T.University, Lonere</p>
+            <p>Kanchanwadi, Paithan Road, Chhatrapati Sambhajinagar 431 002 (M.S)</p>
+            <p>Ph. No.: (0240) 2379248, 2364663 Fax: (0240) 2370915</p>
+            <p>Email: <a href="mailto:shahucce@gmail.com">shahucce@gmail.com</a> Website: <a href="http://www.csmssengg.org">www.csmssengg.org</a></p>
+            <hr>
+        </div>
+        <div class="content">
+            <span>Ref.: CSCOE/BONAFIDE/2024</span>
+            <span style="margin-left: 360px;">Date: 04/09/2024</span>
+            <h2>BONAFIDE CERTIFICATE</h2>
+            <p>This is to certify that <strong><b><%= data.name %> </b></strong> is a bonafide student of this college studying in <strong><b> <%= data.class %>  <%= data.branch %> </b></strong> Engineering during the academic year 2024-2025. His date of birth as per college register is <%= data.Dob %>.</p>
+            <p>His conduct and progress is satisfactory to the best of my knowledge. He bears a good moral character.</p>
+        </div>
+        <div class="footer">
+            <p class="signature">Principal</p>
+        </div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "csmss-digital-bonafide",
+  "version": "1.0.0",
+  "description": "CSMSS Digital Bonafide System",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "keywords": [
+    "bonafide",
+    "csmss"
+  ],
+  "author": "Tejas Sunil Surse (9322455304)",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "mongoose": "^8.7.1",
+    "nodemon": "^3.1.7"
+  }
+}
